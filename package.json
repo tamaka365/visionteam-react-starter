@@ -52,7 +52,6 @@
   "devDependencies": {
     "@redux-devtools/core": "^3.13.1",
     "babel-plugin-import": "^1.13.5",
-    "dotenv": "^16.0.1",
     "http-proxy-middleware": "^2.0.6",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.54.4",
