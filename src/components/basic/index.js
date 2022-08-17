@@ -1,3 +1,5 @@
+import Flex from "./Flex/index";
+
 import Button from "./Button/index";
 
-export { Button };
+export { Flex, Button };

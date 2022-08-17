@@ -13,7 +13,7 @@ import {
 
 import { Button } from "src/components/basic/index";
 import { Count } from "src/components/index";
-import { Input } from "src/components/antd-csutom/index";
+import { Input } from "src/components/antd-custom/index";
 
 import classes from "./index.module.scss";
 import classNames from "classnames/bind";
