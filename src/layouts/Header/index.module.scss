@@ -1,0 +1,11 @@
+.header {
+  order: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

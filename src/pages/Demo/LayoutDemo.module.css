@@ -1,0 +1,46 @@
+.pc-header {
+  height: 64px;
+  background-color: rgba(127, 255, 212, 0.16);
+  border-bottom: 1px solid #488d76;
+  box-sizing: border-box;
+}
+
+.mobile-header {
+  background-color: blueviolet;
+  color: violet;
+  height: 80px;
+}
+
+.content {
+  background-color: rgba(0, 0, 255, 0.16);
+  height: 100%;
+}
+
+.footer {
+  background-color: black;
+  color: gold;
+  height: 164px;
+}
+
+.left-side {
+  background-color: blue;
+  height: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  color: aliceblue;
+  list-style-type: none;
+  margin: 0;
+}
+
+.right-side {
+  width: 240px;
+}
+
+.pc-header {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 18px;
+}
