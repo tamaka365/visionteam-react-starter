@@ -4,5 +4,5 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 export default function Aside({ children }) {
-  return <div className={cx("aside")}>{children}</div>;
+  return <aside className={cx("aside")}>{children}</aside>;
 }
