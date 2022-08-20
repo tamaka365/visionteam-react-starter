@@ -8,6 +8,7 @@ import { useLayout } from "../LayoutProvider";
  * @param {number} props.minWidth
  * @param {number} props.maxWidth
  * @param {'mobile' | 'pc' | auto} props.device
+ * @param {boolean} props.earlyResponse
  * @returns
  */
 export default function Response({

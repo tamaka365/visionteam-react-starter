@@ -21,7 +21,6 @@ export default function Layout({
   minWidth = 1280,
   maxWidth = 1920,
   children,
-  responseEarly = false,
   mode = "size",
 }) {
   const [currentWidth, setCurrentWidth] = useState();
@@ -35,11 +34,10 @@ export default function Layout({
     () => ({
       minWidth,
       maxWidth,
-      earlyResponse: responseEarly && currentWidth <= minWidth,
       currentWidth,
       isMobile: mode === "size" ? currentWidth <= mobileWidth : isMobile(),
     }),
-    [currentWidth, maxWidth, minWidth, mobileWidth, mode, responseEarly]
+    [currentWidth, maxWidth, minWidth, mobileWidth, mode]
   );
 
   useEffect(() => {

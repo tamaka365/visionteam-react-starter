@@ -1,14 +1,21 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import LayoutProvider, { useLayout } from "../LayoutProvider";
+
+import { createContext, useContext } from "react";
+
+const providerContext = createContext({});
+
+const MonoProvider = providerContext.Provider;
+
+const useMonospace = () => useContext(providerContext);
 
 export default function MonospaceProvider({ children }) {
   const providerValueArray = useState("auto");
 
-  return <LayoutProvider value={providerValueArray}>{children}</LayoutProvider>;
+  return <MonoProvider value={providerValueArray}>{children}</MonoProvider>;
 }
 
 export const Monospace = ({ width, children }) => {
-  const [monospaceWidth, setMonospaceWidth] = useLayout();
+  const [monospaceWidth, setMonospaceWidth] = useMonospace();
 
   const divElementRef = useRef();
 
