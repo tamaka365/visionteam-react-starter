@@ -9,6 +9,8 @@ import {
   Aside,
   Nav,
   Response,
+  MonospaceProvider,
+  Monospace,
 } from "src/layouts/index";
 
 import { Flex } from "src/components/basic/index";
@@ -79,6 +81,34 @@ export default function LayoutDemo() {
         </Aside>
         <Content>
           <div className={cx("content")}>this is main</div>
+          <MonospaceProvider>
+            <Monospace>hello world 1</Monospace>
+            <Monospace width="max-content">
+              hello world 2, this is your
+            </Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+            <Monospace>hello world 3</Monospace>
+          </MonospaceProvider>
         </Content>
         <Aside>
           <Response device="pc">

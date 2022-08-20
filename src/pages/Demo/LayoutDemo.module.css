@@ -1,6 +1,6 @@
 .pc-header {
   height: 64px;
-  background-color: rgba(127, 255, 212, 0.16);
+  background-color: rgba(127, 255, 212);
   border-bottom: 1px solid #488d76;
   box-sizing: border-box;
 }
@@ -13,7 +13,6 @@
 
 .content {
   background-color: rgba(0, 0, 255, 0.16);
-  height: 100%;
 }
 
 .footer {

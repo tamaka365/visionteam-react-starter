@@ -70,7 +70,7 @@ export default function Layout({
     <>
       {currentWidth && (
         <LayoutProvider value={providerValueObject}>
-          <Flex fd="column" style={style}>
+          <Flex fd="column" ai="center" style={style}>
             {children}
           </Flex>
         </LayoutProvider>

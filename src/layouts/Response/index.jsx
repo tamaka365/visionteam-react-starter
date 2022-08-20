@@ -15,6 +15,7 @@ export default function Response({
   minWidth,
   maxWidth,
   device = "auto",
+  earlyResponse,
 }) {
   const { isMobile, currentWidth } = useLayout();
 
@@ -37,13 +38,9 @@ export default function Response({
     }
   }, [currentWidth, device, isMobile, maxWidth, minWidth]);
 
-  return <>{showStatus && children}</>;
-}
-
-export const CustomResponse = ({ device, earlyResponse, children }) => {
   if (earlyResponse) {
     return <>{device === "mobile" && children}</>;
   }
 
-  return <Response device={device}>{children}</Response>;
-};
+  return <>{showStatus && children}</>;
+}

@@ -1,4 +1,4 @@
-import { CustomResponse } from "../Response/index";
+import Response from "../Response/index";
 import { useLayout } from "../LayoutProvider";
 
 /**
@@ -11,8 +11,8 @@ export default function Nav({ device, children }) {
   const { earlyResponse } = useLayout();
 
   return (
-    <CustomResponse earlyResponse={earlyResponse} device={device}>
+    <Response earlyResponse={earlyResponse} device={device}>
       <nav>{children}</nav>
-    </CustomResponse>
+    </Response>
   );
 }
