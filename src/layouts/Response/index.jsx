@@ -18,30 +18,34 @@ export default function Response({
   device = "auto",
   earlyResponse,
 }) {
-  const { isMobile, currentWidth } = useLayout();
+  const { isMobile, currentWidth, minWidth: mWidth } = useLayout();
 
   const showStatus = useMemo(() => {
-    if (currentWidth < minWidth) {
+    if (minWidth && currentWidth < minWidth) {
       return false;
     }
 
-    if (currentWidth > maxWidth) {
+    if (maxWidth && currentWidth > maxWidth) {
       return false;
     }
 
     switch (device) {
       case "mobile":
-        return isMobile;
+        return earlyResponse ? mWidth > currentWidth : isMobile;
       case "pc":
-        return !isMobile;
+        return earlyResponse ? currentWidth > mWidth : !isMobile;
       default:
         return true;
     }
-  }, [currentWidth, device, isMobile, maxWidth, minWidth]);
-
-  if (earlyResponse) {
-    return <>{device === "mobile" && children}</>;
-  }
+  }, [
+    currentWidth,
+    device,
+    earlyResponse,
+    isMobile,
+    mWidth,
+    maxWidth,
+    minWidth,
+  ]);
 
   return <>{showStatus && children}</>;
 }

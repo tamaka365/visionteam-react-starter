@@ -1,7 +1,7 @@
 import { Provider as StoreProvider } from "react-redux";
 import store from "./store/index";
 
-import Routes from "./routes";
+import Routes from "./routes/index";
 
 import "./App.scss";
 

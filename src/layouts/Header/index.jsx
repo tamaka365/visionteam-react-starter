@@ -21,7 +21,7 @@ export default function Header({
 }) {
   return (
     <Response earlyResponse={earlyResponse} device={device}>
-      <header className={cx("header", { position })}>{children}</header>
+      <header className={cx("header", position)}>{children}</header>
     </Response>
   );
 }

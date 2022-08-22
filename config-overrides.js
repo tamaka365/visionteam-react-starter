@@ -7,7 +7,32 @@ if (platform !== "prod") {
   process.env.GENERATE_SOURCEMAP = true;
 }
 
-module.exports = function override(config, env) {
+const {
+  useBabelRc: babelRc,
+  override,
+  addWebpackModuleRule,
+  setWebpackStats,
+} = require("customize-cra");
+
+module.exports = (config, env) => {
+  const overrider = override(
+    babelRc(),
+    setWebpackStats("none"),
+    addWebpackModuleRule({
+      test: /\.(ts|tsx|jsx|js)$/,
+      use: [
+        { loader: "babel-loader" },
+        {
+          loader: "@linaria/webpack-loader",
+          options: {
+            cacheDirectory: "src/.linaria_cache",
+            sourceMap: process.env.NODE_ENV !== "production",
+          },
+        },
+      ],
+    })
+  );
+
   if (env === "production") {
     const minimizer = config.optimization.minimizer;
     config.optimization.minimizer = [
@@ -23,5 +48,5 @@ module.exports = function override(config, env) {
     ];
   }
 
-  return config;
+  return overrider(config, env);
 };
