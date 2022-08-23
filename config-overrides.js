@@ -7,7 +7,7 @@ if (platform !== "prod") {
   process.env.GENERATE_SOURCEMAP = true;
 }
 
-const { useBabelRc: babelRc, override } = require("customize-cra");
+// const { useBabelRc: babelRc, override } = require("customize-cra");
 
 module.exports = (config, env) => {
   // const overrider = override(babelRc());
