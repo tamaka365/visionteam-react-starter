@@ -1,0 +1,6 @@
+{
+  "plugins": ["@emotion"],
+  "rules": {
+    "@emotion/pkg-renaming": "error"
+  }
+}
